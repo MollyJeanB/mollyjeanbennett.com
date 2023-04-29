@@ -1,9 +1,9 @@
 import "@/styles/globals.css"
 import type { AppProps } from "next/app"
 //replace with google font of choice
-import { Arimo } from "next/font/google"
+import { Roboto_Mono } from "next/font/google"
 
-const arimo = Arimo({ subsets: ["latin"] })
+const arimo = Roboto_Mono({ subsets: ["latin"] })
 
 export default function App({ Component, pageProps }: AppProps) {
 	return (
