@@ -18,7 +18,6 @@ body {
 		var(--color-pale-pink),
 		var(--color-golden-yellow)
 	);
-	padding: var(--size-l);
 }
 
 a {
