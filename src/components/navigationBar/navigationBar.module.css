@@ -1,0 +1,23 @@
+.navigationWrapper {
+	background: var(--color-bright-yellow);
+	height: var(--size-xl);
+	position: fixed;
+	width: 100%;
+	top: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 2;
+}
+
+.linkList {
+	list-style-type: none;
+	margin-left: 0;
+	padding-left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.linkButton {
+}
