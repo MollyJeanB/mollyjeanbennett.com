@@ -14,10 +14,7 @@ body {
 
 body {
 	color: var(--color-black);
-	background: linear-gradient(
-		var(--color-pale-pink),
-		var(--color-golden-yellow)
-	);
+	background: var(--color-tangerine);
 }
 
 a {

@@ -4,8 +4,13 @@
 	background-image: url("../../assets/handstand.gif");
 	height: 400px;
 	background-position: bottom;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-color: var(--color-tangerine);
+	background-size: contain;
+	background-repeat: repeat-x;
 	position: relative;
+}
+
+@media screen and (max-width: 970px) {
+	.heroWrapper {
+		background-size: cover;
+	}
 }

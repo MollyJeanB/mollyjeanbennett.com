@@ -18,12 +18,6 @@ export default function Home() {
 				<HandstandHero>
 					<Header title={"Hi, I'm Molly Jean."} />
 				</HandstandHero>
-
-				<footer className={styles.footer}>
-					<GitHubLink
-						link={"https://github.com/MollyJeanB/mollyjeanbennett.com"}
-					/>
-				</footer>
 			</main>
 		</>
 	)

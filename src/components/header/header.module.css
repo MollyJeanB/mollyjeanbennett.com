@@ -1,11 +1,12 @@
 .wrapper {
-	padding-top: var(--size-l);
+	padding: var(--size-l) var(--size-s) var(--size-s);
 }
 
 .title {
 	text-align: center;
 	font-size: 40px;
 	font-weight: var(--font-weight-bold);
+	text-shadow: 2px 2px var(--color-tangerine);
 }
 
 .subTitle {
