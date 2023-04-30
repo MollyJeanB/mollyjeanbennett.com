@@ -1,6 +1,6 @@
 import Head from "next/head"
 import styles from "@/styles/page.module.css"
-import { GitHubLink, Header } from "@/components"
+import { GitHubLink, HandstandHero, Header } from "@/components"
 
 export default function Home() {
 	return (
@@ -15,12 +15,9 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<main className={styles.main}>
-				<Header title={"Molly Jean Bennett"} subTitle={"It's me."} />
-				<footer className={styles.footer}>
-					<GitHubLink
-						link={"https://github.com/MollyJeanB/mollyjeanbennett.com"}
-					/>
-				</footer>
+				<HandstandHero>
+					<Header title={"Hi, I'm Molly Jean."} />
+				</HandstandHero>
 			</main>
 		</>
 	)
