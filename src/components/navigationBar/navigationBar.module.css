@@ -20,4 +20,19 @@
 }
 
 .linkButton {
+	background: var(--color-bright-yellow);
+	font: unset;
+	padding: var(--size-xs);
+	margin: var(--size-xxs);
+	border: none;
+	font-size: var(--size-s);
+	cursor: pointer;
+	border-radius: var(--border-radius-semi-rounded);
+	transition: background var(--transition-duration);
+}
+
+.linkButton:hover {
+	/* text-decoration: underline; */
+	/* color: var(--color-brick); */
+	background: var(--color-pale-orange);
 }

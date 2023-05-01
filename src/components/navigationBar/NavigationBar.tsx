@@ -15,7 +15,10 @@ export const NavigationBar: React.FC<PropsType> = ({ pageSections }) => {
 			<ul className={styles.linkList}>
 				{pageSections.map((section) => (
 					<li key={section.content.title}>
-						<button onClick={() => handleClick(section.ref)}>
+						<button
+							onClick={() => handleClick(section.ref)}
+							className={styles.linkButton}
+						>
 							{section.content.title}
 						</button>
 					</li>
