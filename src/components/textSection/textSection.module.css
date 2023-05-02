@@ -1,6 +1,6 @@
 .sectionWrapper {
 	width: 100%;
-	padding: var(--size-l);
+	padding: var(--size-m);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -20,5 +20,5 @@
 
 .sectionInner {
 	font-size: var(--size-s);
-	max-width: 800px;
+	max-width: 960px;
 }
