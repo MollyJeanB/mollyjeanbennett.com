@@ -1,0 +1,24 @@
+.sectionWrapper {
+	width: 100%;
+	padding: var(--size-l);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.sectionWrapper:first-child {
+	background: var(--color-golden-tangerine);
+}
+
+.sectionWrapper:nth-child(2) {
+	background: var(--color-orange);
+}
+
+.sectionWrapper:nth-child(3) {
+	background: var(--color-dark-orange);
+}
+
+.sectionInner {
+	font-size: var(--size-s);
+	max-width: 800px;
+}

@@ -1,8 +1,8 @@
 .heroWrapper {
 	width: 100%;
-	margin-top: 50px;
+	margin-top: var(--size-xl);
 	background-image: url("../../assets/handstand.gif");
-	height: 400px;
+	min-height: 400px;
 	background-position: bottom;
 	background-size: contain;
 	background-repeat: repeat-x;
@@ -12,5 +12,6 @@
 @media screen and (max-width: 970px) {
 	.heroWrapper {
 		background-size: cover;
+		min-height: 300px;
 	}
 }

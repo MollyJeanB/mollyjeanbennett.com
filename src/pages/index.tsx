@@ -1,8 +1,12 @@
 import Head from "next/head"
 import styles from "@/styles/page.module.css"
-import { GitHubLink, HandstandHero, Header } from "@/components"
+import { HandstandHero, Header, NavigationBar, TextSection } from "@/components"
+import { useSectionsRefs } from "@/utilities/useSectionsRefs"
+import { sections } from "@/content/sections"
 
 export default function Home() {
+	const pageSections = useSectionsRefs(sections)
+
 	return (
 		<>
 			<Head>
@@ -15,9 +19,17 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<main className={styles.main}>
+				<NavigationBar pageSections={pageSections} />
 				<HandstandHero>
 					<Header title={"Hi, I'm Molly Jean."} />
 				</HandstandHero>
+				<div className={styles.calloutWrapper}>
+					{pageSections.map((section) => (
+						<TextSection scrollRef={section.ref} key={section.content.title}>
+							{section.content.body}
+						</TextSection>
+					))}
+				</div>
 			</main>
 		</>
 	)

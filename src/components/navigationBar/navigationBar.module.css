@@ -1,0 +1,36 @@
+.navigationWrapper {
+	background: var(--color-bright-yellow);
+	height: var(--size-xl);
+	position: fixed;
+	width: 100%;
+	top: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 2;
+}
+
+.linkList {
+	list-style-type: none;
+	margin-left: 0;
+	padding-left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.linkButton {
+	background: var(--color-bright-yellow);
+	font: unset;
+	padding: var(--size-xs);
+	margin: var(--size-xxs);
+	border: none;
+	font-size: var(--size-s);
+	cursor: pointer;
+	border-radius: var(--border-radius-semi-rounded);
+	transition: background var(--transition-duration);
+}
+
+.linkButton:hover {
+	background: var(--color-pale-orange);
+}
