@@ -25,7 +25,7 @@ export default function Home() {
 				</HandstandHero>
 				<div className={styles.calloutWrapper}>
 					{pageSections.map((section) => (
-						<TextSection ref={section.ref} key={section.content.title}>
+						<TextSection scrollRef={section.ref} key={section.content.title}>
 							{section.content.body}
 						</TextSection>
 					))}

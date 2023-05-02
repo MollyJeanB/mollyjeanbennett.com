@@ -19,5 +19,6 @@
 }
 
 .sectionInner {
+	font-size: var(--size-s);
 	max-width: 800px;
 }
