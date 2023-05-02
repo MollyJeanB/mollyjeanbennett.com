@@ -1,3 +1,4 @@
+import { Footer } from "@/components"
 import { ReactNode } from "react"
 
 export type SectionContentType = {
@@ -66,7 +67,7 @@ export const sections: SectionContentType[] = [
 		title: "Contact",
 		body: (
 			<>
-				<p>Social Links to go Here</p>
+				<Footer />
 			</>
 		),
 	},

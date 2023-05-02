@@ -18,6 +18,10 @@
 	background: var(--color-dark-orange);
 }
 
+.sectionWrapper:last-child {
+	background: var(--color-bright-yellow);
+}
+
 .sectionInner {
 	font-size: var(--size-s);
 	max-width: 960px;
