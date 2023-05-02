@@ -1,7 +1,7 @@
 .heroWrapper {
 	width: 100%;
 	margin-top: var(--size-xl);
-	background-image: url("../../assets/handstand.gif");
+	background-image: url("../../assets/images/handstand.gif");
 	min-height: 400px;
 	background-position: bottom;
 	background-size: contain;
