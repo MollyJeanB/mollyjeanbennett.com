@@ -32,7 +32,5 @@
 }
 
 .linkButton:hover {
-	/* text-decoration: underline; */
-	/* color: var(--color-brick); */
 	background: var(--color-pale-orange);
 }

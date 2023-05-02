@@ -1,12 +1,12 @@
 import Head from "next/head"
 import styles from "@/styles/page.module.css"
-import { HandstandHero, Header, NavigationBar } from "@/components"
+import { HandstandHero, Header, NavigationBar, TextSection } from "@/components"
 import { useSectionsRefs } from "@/utilities/useSectionsRefs"
 import { sections } from "@/content/sections"
 
 export default function Home() {
 	const pageSections = useSectionsRefs(sections)
-	console.log(pageSections)
+
 	return (
 		<>
 			<Head>
@@ -23,11 +23,13 @@ export default function Home() {
 				<HandstandHero>
 					<Header title={"Hi, I'm Molly Jean."} />
 				</HandstandHero>
-				{pageSections.map((section) => (
-					<section ref={section.ref} key={section.content.title}>
-						{section.content.body}
-					</section>
-				))}
+				<div className={styles.calloutWrapper}>
+					{pageSections.map((section) => (
+						<TextSection ref={section.ref} key={section.content.title}>
+							{section.content.body}
+						</TextSection>
+					))}
+				</div>
 			</main>
 		</>
 	)
