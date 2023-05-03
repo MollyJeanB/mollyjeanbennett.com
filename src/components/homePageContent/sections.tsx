@@ -1,5 +1,7 @@
 import { Footer } from "@/components"
 import { ReactNode } from "react"
+import { LinkCards } from "../linkCards/LinkCards"
+import { Card } from "../linkCards/Card"
 
 export type SectionContentType = {
 	title: string
@@ -44,35 +46,26 @@ export const sections: SectionContentType[] = [
 					challenges that help new engineers hone their skill set and get hired.
 					Recently, I've built:
 				</p>
-				<ul>
-					<li>
-						🥓🥬🍅{" "}
-						<a href={"https://www.chat-blt.com/"} target={"blank"}>
-							ChatBLT
-						</a>
-						, a sandwich-based chatbot
-					</li>
-					<li>
-						🧀🕺🧀{" "}
-						<a
-							href={"https://www.shake-it-like-a-cheese-stick.com/"}
-							target={"blank"}
-						>
-							Shake it Like a Cheese Stick
-						</a>
-						, an interpretive dance facilitation app
-					</li>
-					<li>
-						⚠️👀🐛{" "}
-						<a
-							href={"https://replit.com/@MJB/Alert-Badges-challenge"}
-							target={"blank"}
-						>
-							An Alert Badges Challenge
-						</a>{" "}
-						to teach frontend debugging
-					</li>
-				</ul>
+				<LinkCards>
+					<Card
+						heading={"ChatBLT"}
+						link={"https://www.chat-blt.com/"}
+						emojis={"🥓🥬🍅"}
+						body={"A sandwich-based chatbot"}
+					/>
+					<Card
+						heading={"Shake it Like a Cheese Stick"}
+						link={"https://www.shake-it-like-a-cheese-stick.com/"}
+						emojis={"🧀🕺🧀"}
+						body={"An interpretive dance facilitation app"}
+					/>
+					<Card
+						heading={"Alert Badges Challenge"}
+						link={"https://replit.com/@MJB/Alert-Badges-challenge"}
+						emojis={"⚠️👀🐛"}
+						body={"An exercise for teaching frontend debugging"}
+					/>
+				</LinkCards>
 			</>
 		),
 	},
