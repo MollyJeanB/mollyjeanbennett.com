@@ -43,5 +43,5 @@
 }
 
 .linkButton:focus {
-	outline: 2px solid var(--color-dark-orange);
+	outline: 2px solid var(--color-brick);
 }

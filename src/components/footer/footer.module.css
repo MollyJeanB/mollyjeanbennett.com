@@ -11,3 +11,30 @@
 	align-items: center;
 	justify-content: center;
 }
+
+.link {
+	text-decoration: underline;
+	padding-bottom: var(--size-xs);
+}
+
+.link:hover {
+	color: var(--color-brick);
+}
+
+.iconLink {
+	width: var(--size-xl);
+	height: var(--size-xl);
+	margin: 5px var(--size-xs) 0;
+}
+
+.icon {
+	transition: transform var(--transition-duration);
+}
+
+.icon:hover {
+	color: var(--color-brick);
+	cursor: pointer;
+	-webkit-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	transform: scale(1.2);
+}
