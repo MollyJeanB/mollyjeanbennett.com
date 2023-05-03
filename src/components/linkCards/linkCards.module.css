@@ -2,6 +2,7 @@
 	width: 100%;
 	list-style-type: none;
 	margin-left: 0;
+	padding-top: var(--size-xs);
 	padding-left: 0;
 	display: flex;
 }
@@ -19,7 +20,24 @@
 	padding: var(--size-s);
 	font-size: 15px;
 	text-align: center;
+	background-color: var(--color-tangerine);
+	transition: background var(--transition-duration);
+}
+
+.card:hover {
 	background-color: var(--color-pale-yellow);
+}
+
+.link {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	justify-content: center;
+}
+
+.heading {
+	font-size: 20px;
+	padding-bottom: var(--size-xxs);
 }
 
 .card:not(:first-child) {
@@ -33,12 +51,9 @@
 	}
 }
 
-.card:hover {
-	background-color: var(--color-medium-yellow);
-}
-
 .icon {
 	position: absolute;
 	top: var(--size-xs);
 	right: var(--size-xs);
+	color: var(--color-brick);
 }

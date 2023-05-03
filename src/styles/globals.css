@@ -23,7 +23,7 @@ a {
 }
 
 p:not(:last-child) {
-	padding-bottom: var(--size-s);
+	padding-bottom: 22px;
 }
 
 ul {
