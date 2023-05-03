@@ -1,6 +1,12 @@
 import Head from "next/head"
 import styles from "@/styles/page.module.css"
-import { HandstandHero, Header, NavigationBar, TextSection } from "@/components"
+import {
+	Footer,
+	HandstandHero,
+	Header,
+	NavigationBar,
+	TextSection,
+} from "@/components"
 import { useSectionsRefs } from "@/utilities/useSectionsRefs"
 import { sections } from "@/content/sections"
 

@@ -1,3 +1,4 @@
+export { Footer } from "./footer/Footer"
 export { GitHubLink } from "./gitHubLink/GitHubLink"
 export { HandstandHero } from "./handstandHero/HandstandHero"
 export { Header } from "./header/Header"
