@@ -2,6 +2,7 @@
 	/* colors */
 	--color-bright-yellow: #f6dc34;
 	--color-golden-yellow: #ffc100;
+	--color-pale-yellow: hsl(45, 100%, 50%, 0.75);
 	--color-tangerine: #ffa332;
 	--color-orange: #ff8d00;
 	--color-pale-orange: hsl(28, 77%, 59%, 0.75);

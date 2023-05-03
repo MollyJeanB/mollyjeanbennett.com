@@ -1,7 +1,8 @@
 .sectionWrapper {
 	width: 100%;
-	padding: var(--size-m);
+	padding: 35px var(--size-m);
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 }
@@ -25,4 +26,8 @@
 .sectionInner {
 	font-size: var(--size-s);
 	max-width: 960px;
+}
+
+.heading {
+	padding-bottom: var(--size-s);
 }

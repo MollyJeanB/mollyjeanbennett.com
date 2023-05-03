@@ -18,11 +18,12 @@ body {
 }
 
 a {
+	text-decoration: none;
 	color: inherit;
 }
 
 p:not(:last-child) {
-	padding-bottom: var(--size-s);
+	padding-bottom: 22px;
 }
 
 ul {

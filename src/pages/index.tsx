@@ -1,17 +1,11 @@
 import Head from "next/head"
 import styles from "@/styles/page.module.css"
-import {
-	Footer,
-	HandstandHero,
-	Header,
-	NavigationBar,
-	TextSection,
-} from "@/components"
-import { useSectionsRefs } from "@/utilities/useSectionsRefs"
+import { HandstandHero, Header, NavigationBar, TextSection } from "@/components"
+import { SectionType, useSectionsRefs } from "@/utilities/useSectionsRefs"
 import { sections } from "@/components/homePageContent/sections"
 
 export default function Home() {
-	const pageSections = useSectionsRefs(sections)
+	const pageSections: SectionType[] = useSectionsRefs(sections)
 
 	return (
 		<>
@@ -30,11 +24,18 @@ export default function Home() {
 					<Header title={"Hi, I'm Molly Jean."} />
 				</HandstandHero>
 				<div className={styles.calloutWrapper}>
-					{pageSections.map((section) => (
-						<TextSection scrollRef={section.ref} key={section.content.title}>
-							{section.content.body}
-						</TextSection>
-					))}
+					{pageSections.map((section) => {
+						const { ref, content } = section
+						return (
+							<TextSection
+								scrollRef={ref}
+								key={content.title}
+								heading={content.showTitle ? content.title : null}
+							>
+								{content.body}
+							</TextSection>
+						)
+					})}
 				</div>
 			</main>
 		</>
