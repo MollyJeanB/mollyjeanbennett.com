@@ -8,7 +8,7 @@ import {
 	TextSection,
 } from "@/components"
 import { useSectionsRefs } from "@/utilities/useSectionsRefs"
-import { sections } from "@/content/sections"
+import { sections } from "@/components/homePageContent/sections"
 
 export default function Home() {
 	const pageSections = useSectionsRefs(sections)

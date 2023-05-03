@@ -1,5 +1,5 @@
 import { useRef, RefObject } from "react"
-import { SectionContentType } from "@/content/sections"
+import { SectionContentType } from "@/components/homePageContent/sections"
 
 export type SectionType = {
 	content: SectionContentType

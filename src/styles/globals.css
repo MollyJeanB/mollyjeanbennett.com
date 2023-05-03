@@ -19,9 +19,12 @@ body {
 
 a {
 	color: inherit;
-	text-decoration: none;
 }
 
 p:not(:last-child) {
 	padding-bottom: var(--size-s);
+}
+
+ul {
+	margin-left: var(--size-m);
 }
