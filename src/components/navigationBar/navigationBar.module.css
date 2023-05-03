@@ -26,6 +26,7 @@
 	margin: var(--size-xxs);
 	border: none;
 	font-size: var(--size-s);
+	color: var(--color-black);
 	cursor: pointer;
 	border-radius: var(--border-radius-semi-rounded);
 	transition: background var(--transition-duration);
