@@ -6,8 +6,11 @@ export const Footer: React.FC = () => {
 	return (
 		<footer className={styles.footerWrapper}>
 			<a
-				href={"../../assets/documents/MollyJeanBennett_Resume_April_2023.pdf"}
+				href={
+					"https://mjb-portfolio-public-assets.s3.us-west-2.amazonaws.com/MollyJeanBennett_Resume_April_2023.pdf"
+				}
 				target="_blank"
+				download
 				className={styles.link}
 			>
 				{"Download Resume"}
