@@ -1,12 +1,19 @@
 import React, { RefObject } from "react"
 import styles from "./navigationBar.module.css"
 import { SectionType } from "@/utilities/useSectionsRefs"
+import { ToggleSwitch } from "../toggleSwitch/ToggleSwitch"
 
 type PropsType = {
 	pageSections: SectionType[]
+	initialColorThemeIsOn: boolean
+	setInitialColorThemeIsOn: (isOn: boolean) => void
 }
 
-export const NavigationBar: React.FC<PropsType> = ({ pageSections }) => {
+export const NavigationBar: React.FC<PropsType> = ({
+	pageSections,
+	initialColorThemeIsOn,
+	setInitialColorThemeIsOn,
+}) => {
 	const handleClick = (ref: RefObject<HTMLTextAreaElement>) => {
 		ref.current?.scrollIntoView({ behavior: "smooth" })
 	}
@@ -24,6 +31,12 @@ export const NavigationBar: React.FC<PropsType> = ({ pageSections }) => {
 					</li>
 				))}
 			</ul>
+			<ToggleSwitch
+				isOn={initialColorThemeIsOn}
+				setIsOn={setInitialColorThemeIsOn}
+				onLabel="Autumn mode"
+				offLabel="Spring mode"
+			/>
 		</nav>
 	)
 }

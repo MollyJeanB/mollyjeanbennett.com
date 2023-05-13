@@ -1,0 +1,55 @@
+.toggleLabel {
+	display: inline-flex;
+	align-items: center;
+	flex-wrap: wrap;
+	position: relative;
+	gap: 1ch;
+}
+
+.toggleDisplay {
+	--offset: 0.25em;
+	--diameter: 1.8em;
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-around; /* 1 */
+	width: calc(var(--diameter) * 2 + var(--offset) * 2);
+	height: calc(var(--diameter) + var(--offset) * 2);
+	box-sizing: content-box;
+	border: 0.1em solid rgb(0 0 0 / 0.2);
+	position: relative;
+	border-radius: 100vw;
+	background-color: #fbe4e2;
+	transition: 250ms;
+	cursor: pointer;
+}
+
+.toggleDisplay::before {
+	content: "";
+	width: var(--diameter);
+	height: var(--diameter);
+	border-radius: 50%;
+	box-sizing: border-box;
+	border: 0.1 solid rgb(0 0 0 / 0.2);
+	position: absolute;
+	z-index: 2;
+	top: 50%;
+	left: var(--offset);
+	transform: translate(0, -50%);
+	background-color: #fff;
+	transition: inherit;
+}
+
+.toggleInput {
+	position: absolute;
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.toggleInput:checked + .toggleDisplay {
+	background-color: #e3f5eb; /* 1 */
+}
+
+.toggleInput:checked + .toggleDisplay::before {
+	transform: translate(100%, -50%); /* 1 */
+}
