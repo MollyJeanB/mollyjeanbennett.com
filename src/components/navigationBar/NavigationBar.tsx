@@ -31,12 +31,14 @@ export const NavigationBar: React.FC<PropsType> = ({
 					</li>
 				))}
 			</ul>
-			<ToggleSwitch
-				isOn={initialColorThemeIsOn}
-				setIsOn={setInitialColorThemeIsOn}
-				onLabel="Autumn mode"
-				offLabel="Spring mode"
-			/>
+			<div className={styles.controlBar}>
+				<ToggleSwitch
+					isOn={initialColorThemeIsOn}
+					setIsOn={setInitialColorThemeIsOn}
+					onLabel="Autumn mode"
+					offLabel="Spring mode"
+				/>
+			</div>
 		</nav>
 	)
 }
