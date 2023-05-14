@@ -23,7 +23,10 @@ export const ToggleSwitch: React.FC<PropsType> = ({
 				className={styles.toggleInput}
 				onChange={() => setIsOn(!isOn)}
 			/>
-			<span className={styles.toggleDisplay} />
+			<span className={styles.toggleDisplay}>
+				<span className={`${styles.emoji} ${styles.emojiLeft}`}>🍁</span>
+				<span className={`${styles.emoji} ${styles.emojiRight}`}>🌸</span>
+			</span>
 			{isOn ? onLabel : offLabel}
 		</label>
 	)

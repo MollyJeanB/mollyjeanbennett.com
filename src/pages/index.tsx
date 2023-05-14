@@ -6,7 +6,7 @@ import { SectionType, useSectionsRefs } from "@/utilities/useSectionsRefs"
 import { sections } from "@/components/homePageContent/sections"
 
 export default function Home() {
-	const [isFallThemeMode, setIsFallThemeMode] = useState<boolean>(false)
+	const [isFallThemeMode, setIsFallThemeMode] = useState<boolean>(true)
 	const pageSections: SectionType[] = useSectionsRefs(sections)
 
 	return (

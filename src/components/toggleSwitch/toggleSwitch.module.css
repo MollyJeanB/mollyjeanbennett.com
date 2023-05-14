@@ -3,22 +3,21 @@
 	align-items: center;
 	flex-wrap: wrap;
 	position: relative;
-	gap: 1ch;
+	gap: var(--size-xs);
 }
 
 .toggleDisplay {
-	--offset: 0.25em;
-	--diameter: 1.8em;
+	--offset: var(--size-xxs);
+	--diameter: 25px;
 	display: inline-flex;
 	align-items: center;
-	justify-content: space-around; /* 1 */
+	justify-content: space-around;
 	width: calc(var(--diameter) * 2 + var(--offset) * 2);
 	height: calc(var(--diameter) + var(--offset) * 2);
 	box-sizing: content-box;
-	border: 0.1em solid rgb(0 0 0 / 0.2);
+	border: 2px solid var(--color-black);
 	position: relative;
 	border-radius: 100vw;
-	background-color: #fbe4e2;
 	transition: 250ms;
 	cursor: pointer;
 }
@@ -29,13 +28,13 @@
 	height: var(--diameter);
 	border-radius: 50%;
 	box-sizing: border-box;
-	border: 0.1 solid rgb(0 0 0 / 0.2);
+	border: 1px solid var(--color-brick);
 	position: absolute;
 	z-index: 2;
 	top: 50%;
 	left: var(--offset);
 	transform: translate(0, -50%);
-	background-color: #fff;
+	background: var(--color-pale-orange);
 	transition: inherit;
 }
 
@@ -46,10 +45,19 @@
 	height: 100%;
 }
 
-.toggleInput:checked + .toggleDisplay {
-	background-color: #e3f5eb; /* 1 */
+.emoji {
+	position: relative;
+	z-index: 3;
+}
+
+.emojiLeft {
+	padding-left: 2px;
+}
+
+.emojiRight {
+	padding-right: 2px;
 }
 
 .toggleInput:checked + .toggleDisplay::before {
-	transform: translate(100%, -50%); /* 1 */
+	transform: translate(100%, -50%);
 }
