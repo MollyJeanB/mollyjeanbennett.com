@@ -28,13 +28,13 @@
 	height: var(--diameter);
 	border-radius: 50%;
 	box-sizing: border-box;
-	border: 1px solid var(--color-brick);
+	border: 1px solid var(--color-accent-5);
 	position: absolute;
 	z-index: 2;
 	top: 50%;
 	left: var(--offset);
 	transform: translate(0, -50%);
-	background: var(--color-pale-orange);
+	background: var(--color-accent-7);
 	transition: inherit;
 }
 

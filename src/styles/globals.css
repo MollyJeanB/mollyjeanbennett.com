@@ -14,7 +14,25 @@ body {
 
 body {
 	color: var(--color-black);
-	background: var(--color-tangerine);
+	--color-accent-1: var(--color-bright-yellow);
+	--color-accent-2: var(--color-tangerine);
+	--color-accent-3: var(--color-orange);
+	--color-accent-4: var(--color-dark-orange);
+	--color-accent-5: var(--color-brick);
+	--color-accent-6: var(--color-pale-yellow);
+	--color-accent-7: var(--color-pale-orange);
+	background: var(--color-accent-2);
+}
+
+body[data-theme="spring"] {
+	--color-accent-1: var(--color-sage);
+	--color-accent-2: var(--color-pale-pink);
+	--color-accent-3: var(--color-sunset);
+	--color-accent-4: var(--color-cantaloupe);
+	--color-accent-5: var(--color-pastel-yellow);
+	--color-accent-6: var(--color-pale-lilac);
+	--color-accent-7: var(--color-pale-lilac);
+	background: var(--color-accent-2);
 }
 
 a {

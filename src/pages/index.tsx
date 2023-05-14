@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Head from "next/head"
 import styles from "@/styles/page.module.css"
 import { HandstandHero, Header, NavigationBar, TextSection } from "@/components"
@@ -8,6 +8,10 @@ import { sections } from "@/components/homePageContent/sections"
 export default function Home() {
 	const [isFallThemeMode, setIsFallThemeMode] = useState<boolean>(true)
 	const pageSections: SectionType[] = useSectionsRefs(sections)
+
+	useEffect(() => {
+		document.body.dataset.theme = isFallThemeMode ? "fall" : "spring"
+	}, [isFallThemeMode])
 
 	return (
 		<>

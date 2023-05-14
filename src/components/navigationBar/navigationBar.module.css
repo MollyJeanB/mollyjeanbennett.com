@@ -1,5 +1,5 @@
 .navigationWrapper {
-	background: var(--color-bright-yellow);
+	background: var(--color-accent-1);
 	height: var(--size-xl);
 	position: fixed;
 	width: 100%;
@@ -15,7 +15,7 @@
 	.navigationWrapper {
 		padding: 0;
 		justify-content: center;
-		background: var(--color-tangerine);
+		background: var(--color-accent-2);
 	}
 }
 
@@ -49,7 +49,7 @@
 
 	.controlBar {
 		width: 100%;
-		background: var(--color-bright-yellow);
+		background: var(--color-accent-1);
 		position: fixed;
 		top: 60px;
 		width: 100%;
@@ -60,9 +60,9 @@
 }
 
 .linkButton:hover {
-	background: var(--color-pale-orange);
+	background: var(--color-accent-7);
 }
 
 .linkButton:focus {
-	outline: 2px solid var(--color-brick);
+	outline: 2px solid var(--color-accent-5);
 }

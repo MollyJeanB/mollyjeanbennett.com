@@ -15,10 +15,11 @@
 .link {
 	text-decoration: underline;
 	padding-bottom: var(--size-xs);
+	transition: color var(--transition-duration);
 }
 
 .link:hover {
-	color: var(--color-brick);
+	color: var(--color-accent-5);
 }
 
 .iconLink {
@@ -32,7 +33,7 @@
 }
 
 .icon:hover {
-	color: var(--color-brick);
+	color: var(--color-accent-5);
 	cursor: pointer;
 	-webkit-transform: scale(1.2);
 	-ms-transform: scale(1.2);

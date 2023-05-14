@@ -20,12 +20,12 @@
 	padding: var(--size-s);
 	font-size: 15px;
 	text-align: center;
-	background-color: var(--color-tangerine);
+	background-color: var(--color-accent-2);
 	transition: background var(--transition-duration);
 }
 
 .card:hover {
-	background-color: var(--color-pale-yellow);
+	background-color: var(--color-accent-6);
 }
 
 .link {
@@ -55,5 +55,5 @@
 	position: absolute;
 	top: var(--size-xs);
 	right: var(--size-xs);
-	color: var(--color-brick);
+	color: var(--color-accent-5);
 }

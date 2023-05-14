@@ -8,19 +8,19 @@
 }
 
 .sectionWrapper:first-child {
-	background: var(--color-golden-tangerine);
+	background: var(--color-accent-2);
 }
 
 .sectionWrapper:nth-child(2) {
-	background: var(--color-orange);
+	background: var(--color-accent-3);
 }
 
 .sectionWrapper:nth-child(3) {
-	background: var(--color-dark-orange);
+	background: var(--color-accent-4);
 }
 
 .sectionWrapper:last-child {
-	background: var(--color-bright-yellow);
+	background: var(--color-accent-1);
 }
 
 .sectionInner {
