@@ -20,8 +20,6 @@ const NavigationBar: React.FC<PropsType> = ({ pageSections }) => {
 	const [isFallThemeMode, setIsFallThemeMode] =
 		useState<boolean>(initialThemeIsFall)
 
-	console.log(savedTheme, isFallThemeMode)
-
 	const handleClick = (ref: RefObject<HTMLTextAreaElement>) => {
 		ref.current?.scrollIntoView({ behavior: "smooth" })
 	}
