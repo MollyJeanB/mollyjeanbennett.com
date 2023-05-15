@@ -1,17 +1,17 @@
-import { useState, useEffect } from "react"
 import Head from "next/head"
 import styles from "@/styles/page.module.css"
-import { HandstandHero, Header, NavigationBar, TextSection } from "@/components"
+import dynamic from "next/dynamic"
+import { HandstandHero, Header, TextSection } from "@/components"
 import { SectionType, useSectionsRefs } from "@/utilities/useSectionsRefs"
 import { sections } from "@/components/homePageContent/sections"
 
-export default function Home() {
-	const [isFallThemeMode, setIsFallThemeMode] = useState<boolean>(true)
-	const pageSections: SectionType[] = useSectionsRefs(sections)
+const DynamicNavigationBar = dynamic(
+	() => import("../components/navigationBar/NavigationBar"),
+	{ ssr: false }
+)
 
-	useEffect(() => {
-		document.body.dataset.theme = isFallThemeMode ? "fall" : "spring"
-	}, [isFallThemeMode])
+export default function Home() {
+	const pageSections: SectionType[] = useSectionsRefs(sections)
 
 	return (
 		<>
@@ -25,11 +25,7 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<main className={styles.main}>
-				<NavigationBar
-					pageSections={pageSections}
-					initialColorThemeIsOn={isFallThemeMode}
-					setInitialColorThemeIsOn={setIsFallThemeMode}
-				/>
+				<DynamicNavigationBar pageSections={pageSections} />
 				<HandstandHero>
 					<Header title={"Hi, I'm Molly Jean."} />
 				</HandstandHero>

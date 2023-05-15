@@ -1,22 +1,30 @@
-import React, { RefObject } from "react"
+import React, { RefObject, useEffect, useState } from "react"
 import styles from "./navigationBar.module.css"
 import { SectionType } from "@/utilities/useSectionsRefs"
 import { ToggleSwitch } from "../toggleSwitch/ToggleSwitch"
 
 type PropsType = {
 	pageSections: SectionType[]
-	initialColorThemeIsOn: boolean
-	setInitialColorThemeIsOn: (isOn: boolean) => void
 }
+export const FALL_THEME_NAME = "fall"
+export const SPRING_THEME_NAME = "spring"
 
-export const NavigationBar: React.FC<PropsType> = ({
-	pageSections,
-	initialColorThemeIsOn,
-	setInitialColorThemeIsOn,
-}) => {
+const NavigationBar: React.FC<PropsType> = ({ pageSections }) => {
+	const [isFallThemeMode, setIsFallThemeMode] = useState<boolean>(
+		document.body.dataset.theme === FALL_THEME_NAME
+	)
+	const activeTheme: string = isFallThemeMode
+		? FALL_THEME_NAME
+		: SPRING_THEME_NAME
+
 	const handleClick = (ref: RefObject<HTMLTextAreaElement>) => {
 		ref.current?.scrollIntoView({ behavior: "smooth" })
 	}
+
+	useEffect(() => {
+		localStorage.setItem("theme", activeTheme)
+		document.body.dataset.theme = activeTheme
+	}, [activeTheme])
 	return (
 		<nav className={styles.navigationWrapper}>
 			<ul className={styles.linkList}>
@@ -33,8 +41,8 @@ export const NavigationBar: React.FC<PropsType> = ({
 			</ul>
 			<div className={styles.controlBar}>
 				<ToggleSwitch
-					isOn={initialColorThemeIsOn}
-					setIsOn={setInitialColorThemeIsOn}
+					isOn={isFallThemeMode}
+					setIsOn={setIsFallThemeMode}
 					onLabel="Autumn mode"
 					offLabel="Spring mode"
 				/>
@@ -42,3 +50,5 @@ export const NavigationBar: React.FC<PropsType> = ({
 		</nav>
 	)
 }
+
+export default NavigationBar
