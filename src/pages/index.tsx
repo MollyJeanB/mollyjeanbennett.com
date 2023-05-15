@@ -1,8 +1,14 @@
 import Head from "next/head"
 import styles from "@/styles/page.module.css"
-import { HandstandHero, Header, NavigationBar, TextSection } from "@/components"
+import dynamic from "next/dynamic"
+import { HandstandHero, Header, TextSection } from "@/components"
 import { SectionType, useSectionsRefs } from "@/utilities/useSectionsRefs"
 import { sections } from "@/components/homePageContent/sections"
+
+const DynamicNavigationBar = dynamic(
+	() => import("../components/navigationBar/NavigationBar"),
+	{ ssr: false }
+)
 
 export default function Home() {
 	const pageSections: SectionType[] = useSectionsRefs(sections)
@@ -19,7 +25,7 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<main className={styles.main}>
-				<NavigationBar pageSections={pageSections} />
+				<DynamicNavigationBar pageSections={pageSections} />
 				<HandstandHero>
 					<Header title={"Hi, I'm Molly Jean."} />
 				</HandstandHero>

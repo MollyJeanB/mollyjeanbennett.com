@@ -9,6 +9,12 @@
 	position: relative;
 }
 
+@media screen and (max-width: 700px) {
+	.heroWrapper {
+		margin-top: 112px;
+	}
+}
+
 @media screen and (max-width: 970px) {
 	.heroWrapper {
 		background-size: cover;

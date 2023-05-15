@@ -1,13 +1,22 @@
 .navigationWrapper {
-	background: var(--color-bright-yellow);
+	background: var(--color-accent-1);
 	height: var(--size-xl);
 	position: fixed;
 	width: 100%;
 	top: 0;
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-between;
 	z-index: 2;
+	padding: 0 var(--size-m) 0 var(--size-s);
+}
+
+@media screen and (max-width: 700px) {
+	.navigationWrapper {
+		padding: 0;
+		justify-content: center;
+		background: var(--color-accent-2);
+	}
 }
 
 .linkList {
@@ -20,7 +29,7 @@
 }
 
 .linkButton {
-	background: var(--color-bright-yellow);
+	background: inherit;
 	font: unset;
 	padding: var(--size-xs);
 	margin: var(--size-xxs);
@@ -32,17 +41,28 @@
 	transition: background var(--transition-duration);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
 	.linkButton {
 		font-size: 16px;
 		padding: 6px;
 	}
+
+	.controlBar {
+		width: 100%;
+		background: var(--color-accent-1);
+		position: fixed;
+		top: 60px;
+		width: 100%;
+		padding: var(--size-xs) var(--size-m);
+		display: flex;
+		justify-content: center;
+	}
 }
 
 .linkButton:hover {
-	background: var(--color-pale-orange);
+	background: var(--color-accent-7);
 }
 
 .linkButton:focus {
-	outline: 2px solid var(--color-brick);
+	outline: 2px solid var(--color-accent-5);
 }

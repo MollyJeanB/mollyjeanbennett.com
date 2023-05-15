@@ -1,0 +1,64 @@
+.toggleLabel {
+	display: inline-flex;
+	align-items: center;
+	flex-wrap: wrap;
+	position: relative;
+	gap: var(--size-xs);
+}
+
+.toggleDisplay {
+	--offset: var(--size-xxs);
+	--diameter: 25px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-around;
+	width: calc(var(--diameter) * 2 + var(--offset) * 2);
+	height: calc(var(--diameter) + var(--offset) * 2);
+	box-sizing: content-box;
+	border: 1.5px solid var(--color-black);
+	position: relative;
+	border-radius: 100vw;
+	transition: 250ms;
+	cursor: pointer;
+}
+
+.toggleDisplay::before {
+	content: "";
+	width: var(--diameter);
+	height: var(--diameter);
+	border-radius: 50%;
+	box-sizing: border-box;
+	border: 1px solid var(--color-accent-5);
+	position: absolute;
+	z-index: 2;
+	top: 50%;
+	left: var(--offset);
+	transform: translate(0, -50%);
+	background: var(--color-accent-7);
+	transition: inherit;
+}
+
+.toggleInput {
+	position: absolute;
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.emoji {
+	position: relative;
+	z-index: 3;
+	padding-bottom: 1pz;
+}
+
+.emojiLeft {
+	padding-left: 3px;
+}
+
+.emojiRight {
+	padding-right: 3px;
+}
+
+.toggleInput:checked + .toggleDisplay::before {
+	transform: translate(100%, -50%);
+}
