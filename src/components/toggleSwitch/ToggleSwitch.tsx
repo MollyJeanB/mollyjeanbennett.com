@@ -14,7 +14,6 @@ export const ToggleSwitch: React.FC<PropsType> = ({
 	onLabel,
 	offLabel,
 }) => {
-	console.log(isOn)
 	const ariaLabelText: string = `Turn ${isOn ? offLabel : onLabel} on.`
 	return (
 		<label className={styles.toggleLabel} htmlFor="toggle">
