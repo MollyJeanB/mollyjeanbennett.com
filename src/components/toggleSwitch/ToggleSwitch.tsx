@@ -3,17 +3,18 @@ import styles from "./toggleSwitch.module.css"
 
 type PropsType = {
 	isOn: boolean
-	setIsOn: (isOn: boolean) => void
+	onToggleTheme: () => void
 	onLabel: string
 	offLabel: string
 }
 
 export const ToggleSwitch: React.FC<PropsType> = ({
 	isOn,
-	setIsOn,
+	onToggleTheme,
 	onLabel,
 	offLabel,
 }) => {
+	console.log(isOn)
 	const ariaLabelText: string = `Turn ${isOn ? offLabel : onLabel} on.`
 	return (
 		<label className={styles.toggleLabel} htmlFor="toggle">
@@ -23,7 +24,8 @@ export const ToggleSwitch: React.FC<PropsType> = ({
 				id="toggle"
 				aria-label={ariaLabelText}
 				className={styles.toggleInput}
-				onChange={() => setIsOn(!isOn)}
+				onChange={onToggleTheme}
+				checked={isOn}
 			/>
 			<span className={styles.toggleDisplay}>
 				<span

@@ -1,4 +1,4 @@
-import React, { RefObject, useEffect, useState } from "react"
+import React, { RefObject, useState } from "react"
 import styles from "./navigationBar.module.css"
 import { SectionType } from "@/utilities/useSectionsRefs"
 import { ToggleSwitch } from "../toggleSwitch/ToggleSwitch"
@@ -10,21 +10,31 @@ export const FALL_THEME_NAME = "fall"
 export const SPRING_THEME_NAME = "spring"
 
 const NavigationBar: React.FC<PropsType> = ({ pageSections }) => {
-	const [isFallThemeMode, setIsFallThemeMode] = useState<boolean>(
-		document.body.dataset.theme === FALL_THEME_NAME
-	)
-	const activeTheme: string = isFallThemeMode
-		? FALL_THEME_NAME
-		: SPRING_THEME_NAME
+	const savedTheme: string | undefined = document.body.dataset.theme
+	//extra check because undefined can be a string in this case
+	const savedThemeNotSet: boolean =
+		savedTheme !== FALL_THEME_NAME && savedTheme !== SPRING_THEME_NAME
+	const initialThemeIsFall: boolean = savedThemeNotSet
+		? true
+		: savedTheme === FALL_THEME_NAME
+	const [isFallThemeMode, setIsFallThemeMode] =
+		useState<boolean>(initialThemeIsFall)
+
+	console.log(savedTheme, isFallThemeMode)
 
 	const handleClick = (ref: RefObject<HTMLTextAreaElement>) => {
 		ref.current?.scrollIntoView({ behavior: "smooth" })
 	}
 
-	useEffect(() => {
-		localStorage.setItem("theme", activeTheme)
-		document.body.dataset.theme = activeTheme
-	}, [activeTheme])
+	const onToggleTheme = () => {
+		const newActiveTheme: string = isFallThemeMode
+			? SPRING_THEME_NAME
+			: FALL_THEME_NAME
+		setIsFallThemeMode(!isFallThemeMode)
+		localStorage.setItem("theme", newActiveTheme)
+		document.body.dataset.theme = newActiveTheme
+	}
+
 	return (
 		<nav className={styles.navigationWrapper}>
 			<ul className={styles.linkList}>
@@ -41,10 +51,10 @@ const NavigationBar: React.FC<PropsType> = ({ pageSections }) => {
 			</ul>
 			<div className={styles.controlBar}>
 				<ToggleSwitch
-					isOn={isFallThemeMode}
-					setIsOn={setIsFallThemeMode}
-					onLabel="Autumn mode"
-					offLabel="Spring mode"
+					isOn={!isFallThemeMode}
+					onToggleTheme={onToggleTheme}
+					offLabel="Autumn mode"
+					onLabel="Spring mode"
 				/>
 			</div>
 		</nav>
