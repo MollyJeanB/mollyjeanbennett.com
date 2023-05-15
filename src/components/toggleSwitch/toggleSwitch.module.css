@@ -15,7 +15,7 @@
 	width: calc(var(--diameter) * 2 + var(--offset) * 2);
 	height: calc(var(--diameter) + var(--offset) * 2);
 	box-sizing: content-box;
-	border: 2px solid var(--color-black);
+	border: 1.5px solid var(--color-black);
 	position: relative;
 	border-radius: 100vw;
 	transition: 250ms;
@@ -48,14 +48,15 @@
 .emoji {
 	position: relative;
 	z-index: 3;
+	padding-bottom: 1pz;
 }
 
 .emojiLeft {
-	padding-left: 2px;
+	padding-left: 3px;
 }
 
 .emojiRight {
-	padding-right: 2px;
+	padding-right: 3px;
 }
 
 .toggleInput:checked + .toggleDisplay::before {
