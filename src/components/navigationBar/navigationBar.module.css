@@ -11,8 +11,9 @@
 	padding: 0 var(--size-m) 0 var(--size-s);
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 750px) {
 	.navigationWrapper {
+		height: var(--size-xxl);
 		padding: 0;
 		justify-content: center;
 		background: var(--color-accent-2);
@@ -26,6 +27,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex-wrap: wrap;
 }
 
 .linkButton {
@@ -41,17 +43,12 @@
 	transition: background var(--transition-duration);
 }
 
-@media screen and (max-width: 700px) {
-	.linkButton {
-		font-size: 16px;
-		padding: 6px;
-	}
-
+@media screen and (max-width: 750px) {
 	.controlBar {
 		width: 100%;
 		background: var(--color-accent-1);
 		position: fixed;
-		top: 60px;
+		top: var(--size-xxl);
 		width: 100%;
 		padding: var(--size-xs) var(--size-m);
 		display: flex;
