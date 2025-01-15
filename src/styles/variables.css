@@ -30,6 +30,7 @@
 	--size-m: calc(var(--size-base) * 10); /* 30px */
 	--size-l: calc(var(--size-base) * 15); /* 45px */
 	--size-xl: calc(var(--size-base) * 20); /* 60px */
+	--size-xxl: calc(var(--size-base) * 30); /* 90px */
 	/* font-weight */
 	--font-weight-thin: 100;
 	--font-weight-extra-light: 200;

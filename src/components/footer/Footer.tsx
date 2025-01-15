@@ -1,10 +1,13 @@
 import React from "react"
 import styles from "./footer.module.css"
-import { GitHubIcon, LinkedInIcon } from "@/assets/svg"
+import { BlueSkyIcon, GitHubIcon, InstagramIcon, LinkedInIcon } from "@/assets/svg"
 
 export const Footer: React.FC = () => {
 	return (
 		<footer className={styles.footerWrapper}>
+			<a href="https://digitalseamripper.substack.com/" className={styles.link} target="_blank">
+				Email newsletter
+			</a>
 			<a
 				href={
 					"https://mjb-portfolio-public-assets.s3.us-west-2.amazonaws.com/MollyJeanBennett_Resume_April_2023.pdf"
@@ -32,6 +35,20 @@ export const Footer: React.FC = () => {
 					className={styles.iconLink}
 				>
 					<GitHubIcon width={60} height={60} className={styles.icon} />
+				</a>
+				<a
+					href="https://bsky.app/profile/mollyjeanbennett.bsky.social"
+					target="_blank"
+					className={styles.iconLink}
+				>
+					<BlueSkyIcon width={60} height={60} className={styles.icon} />
+				</a>
+				<a
+					href="https://www.instagram.com/mollyjeanbennett"
+					target="_blank"
+					className={styles.iconLink}
+				>
+					<InstagramIcon width={60} height={60} className={styles.icon} />
 				</a>
 			</div>
 		</footer>

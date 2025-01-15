@@ -31,3 +31,13 @@
 .heading {
 	padding-bottom: var(--size-s);
 }
+
+.link {
+	text-decoration: underline;
+	padding-bottom: var(--size-xs);
+	transition: background var(--transition-duration);
+}
+
+.link:hover {
+	background: var(--color-accent-6);
+}

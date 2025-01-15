@@ -21,7 +21,7 @@ const NavigationBar: React.FC<PropsType> = ({ pageSections }) => {
 		useState<boolean>(initialThemeIsFall)
 
 	const handleClick = (ref: RefObject<HTMLTextAreaElement>) => {
-		ref.current?.scrollIntoView({ behavior: "smooth" })
+		ref.current?.scrollIntoView({ behavior: "smooth", block: "center" })
 	}
 
 	const onToggleTheme = () => {
