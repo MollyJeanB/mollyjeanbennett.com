@@ -3,7 +3,7 @@ import styles from "./textSection.module.css"
 
 type PropsType = {
 	children: ReactNode | string
-	scrollRef: RefObject<HTMLTextAreaElement>
+	scrollRef: RefObject<HTMLTextAreaElement | null>
 	heading?: string | null
 }
 
